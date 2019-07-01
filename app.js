@@ -1,9 +1,10 @@
 const express = require('express');
 const app = express();
-const port = 3000;
+
+require('dotenv').config();
 
 app.get('/', (req, res) => {
   console.log('request')
 });
 
-app.listen(port, _ => console.log('listenin'))
+app.listen(3000, _ => console.log('listenin'))
