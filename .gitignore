@@ -1,5 +1,4 @@
-.DS_Store
-package-lock.json
 node_modules
-images
-.env
+dist/
+package-lock.json
+mockup.sketch
