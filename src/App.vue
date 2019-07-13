@@ -1,17 +1,30 @@
 <template>
   <div id="app">
-    <Header />
+    <Header @info-click="toggleInfo"/>
+    <Information v-if="viewingInfo" @close-click="toggleInfo"/>
   </div>
 </template>
 
 <script>
 import Header from "./components/Header.vue";
+import Information from "./components/Information";
 import "normalize.css";
 
 export default {
   name: "app",
+  data: function() {
+    return {
+      viewingInfo: false
+    }
+  },
   components: {
-    Header
+    Header,
+    Information
+  },
+  methods: {
+    toggleInfo: function() {
+      this.viewingInfo = !this.viewingInfo;
+    }
   }
 };
 </script>
@@ -19,7 +32,6 @@ export default {
 <style lang="scss">
 $dark: #000F08;
 $light: #D3DBD8;
-
 
 #app {
   background-color: $light;

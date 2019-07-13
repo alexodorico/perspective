@@ -1,6 +1,6 @@
 <template>
   <div id="button-wrapper">
-    <button>
+    <button @click="emitInfoClick">
       ?
     </button>
   </div>
@@ -8,8 +8,10 @@
 
 <script>
 export default {
-  props: {
-    msg: String
+  methods: {
+    emitInfoClick: function() {
+      this.$emit("info-click");
+    }
   }
 };
 </script>
@@ -18,7 +20,6 @@ export default {
 #button-wrapper {
   width: 100%;
 }
-
 
 button {
   background-color: transparent;

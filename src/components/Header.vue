@@ -2,7 +2,7 @@
   <header>
     <img src="../assets/icons/camera.png" />
     <h1>perspective</h1>
-    <InformationButton />
+    <InformationButton @info-click="emitInfoClick"/>
   </header>
 </template>
 
@@ -13,8 +13,10 @@ export default {
   components: {
     InformationButton
   },
-  props: {
-    msg: String
+  methods: {
+    emitInfoClick: function() {
+      this.$emit("info-click");
+    }
   }
 };
 </script>
