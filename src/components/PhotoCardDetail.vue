@@ -76,15 +76,16 @@ export default {
   display: flex;
   align-items: center;
   margin-right: 15px;
-  opacity: 0.8;
 
   img {
     height: 14.75px;
+    opacity: 0.95;
   }
 
   .value {
     padding: 0 0 0 5px;
     font-size: 14px;
+    opacity: 0.8;
   }
 }
 
