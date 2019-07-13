@@ -1,27 +1,27 @@
 <template>
   <div class="detail-wrapper">
     <div class="detail-top">
-      <h2>Jupiter</h2>
+      <h2>{{ photo.title }}</h2>
       <div class="location-wrapper">
         <img src="../assets/icons/location.png" />
-        <h3>Higgins Lake, MI</h3>
+        <h3>{{ photo.location }}</h3>
       </div>
     </div>
     <div class="detail-bottom">
       <div class="setting">
         <img src="../assets/icons/shutterspeed.png" />
-        <div class="value">500</div>
+        <div class="value">{{ photo.shutter_speed }}</div>
       </div>
       <div class="setting">
         <img src="../assets/icons/fstop.png" />
-        <div class="value">f/1.4</div>
+        <div class="value">{{ photo.aperture }}</div>
       </div>
       <div class="setting">
         <img src="../assets/icons/iso.png" />
-        <div class="value">2400</div>
+        <div class="value">{{ photo.iso }}</div>
       </div>
       <div class="date">
-        12/31/2019
+        {{ photo.taken_date }}
       </div>
     </div>
   </div>
