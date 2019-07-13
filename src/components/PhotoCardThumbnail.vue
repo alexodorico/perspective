@@ -1,12 +1,9 @@
 <template>
-  <div class="thumbnail-wrapper">
-  </div>
+  <div class="thumbnail-wrapper"></div>
 </template>
 
 <script>
-export default {
-  
-}
+export default {};
 </script>
 
 <style lang="scss" scoped>
@@ -20,4 +17,3 @@ export default {
   background-position: 50% 50%;
 }
 </style>
-

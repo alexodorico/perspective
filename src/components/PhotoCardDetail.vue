@@ -9,15 +9,15 @@
     </div>
     <div class="detail-bottom">
       <div class="setting">
-        <img src="../assets/icons/shutterspeed.png">
+        <img src="../assets/icons/shutterspeed.png" />
         <div class="value">500</div>
       </div>
       <div class="setting">
-        <img src="../assets/icons/fstop.png">
+        <img src="../assets/icons/fstop.png" />
         <div class="value">f/1.4</div>
       </div>
       <div class="setting">
-        <img src="../assets/icons/iso.png">
+        <img src="../assets/icons/iso.png" />
         <div class="value">2400</div>
       </div>
       <div class="date">

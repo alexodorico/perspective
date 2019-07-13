@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <Header @info-click="toggleInfo"/>
-    <Information v-if="viewingInfo" @close-click="toggleInfo"/>
+    <Header @info-click="toggleInfo" />
+    <Information v-if="viewingInfo" @close-click="toggleInfo" />
     <PhotoCardWrapper />
   </div>
 </template>
@@ -17,7 +17,7 @@ export default {
   data: function() {
     return {
       viewingInfo: false
-    }
+    };
   },
   components: {
     Header,
@@ -33,8 +33,8 @@ export default {
 </script>
 
 <style lang="scss">
-$dark: #000F08;
-$light: #D3DBD8;
+$dark: #000f08;
+$light: #d3dbd8;
 
 * {
   box-sizing: border-box;

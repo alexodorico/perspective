@@ -1,13 +1,22 @@
 <template>
   <div id="information-wrapper">
     <div class="clearfix">
-      <img @click="emitCloseInfo" src="../assets/icons/close.png">
+      <img @click="emitCloseInfo" src="../assets/icons/close.png" />
     </div>
     <div id="information-text">
       <h2>Hi, my name’s Alex Odorico!</h2>
-      <p>I developed this website so I can have a place to share some of my photography.</p>
-      <p>I love taking of pictures of landscapes and nature, but my latest obsession has been astrophotography.</p>
-      <p>I currently shoot with a Fujifilm XT-3 for those of you who may be into that kind of thing.</p>
+      <p>
+        I developed this website so I can have a
+        place to share some of my photography.
+      </p>
+      <p>
+        I love taking of pictures of landscapes and nature,
+        but my latest obsession has been astrophotography.
+      </p>
+      <p>
+        I currently shoot with a Fujifilm XT-3 for those
+        of you who may be into that kind of thing.
+      </p>
       <p>Feel free to shoot me a message if you want to chat!</p>
       <p>Thanks for visiting!</p>
     </div>
@@ -31,7 +40,7 @@ export default {
 }
 
 #information-wrapper {
-  background-color: #D3DBD8;
+  background-color: #d3dbd8;
   font-family: "Montserrat-Medium";
   position: fixed;
   top: 0;
@@ -58,5 +67,4 @@ img {
   clear: both;
   display: table;
 }
-
 </style>

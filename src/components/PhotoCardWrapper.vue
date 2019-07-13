@@ -1,6 +1,6 @@
 <template>
   <div id="wrapper">
-    <PhotoCard v-for="num in 10" :key="num"/>
+    <PhotoCard v-for="num in 10" :key="num" />
   </div>
 </template>
 
@@ -17,13 +17,13 @@ export default {
 </script>
 
 <style scoped lang="scss">
-  #wrapper {
-    padding: 1em;
-    display: flex;
-    flex-wrap: wrap; 
-    justify-content: center;
-    width: 100%;
-    max-width: 1280px;
-    margin: 0 auto;
-  }
+#wrapper {
+  padding: 1em;
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: center;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
 </style>
