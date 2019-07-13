@@ -79,13 +79,12 @@ export default {
 
   img {
     height: 14.75px;
-    opacity: 0.95;
   }
 
   .value {
     padding: 0 0 0 5px;
     font-size: 14px;
-    opacity: 0.8;
+    color: rgba(0, 15, 8, 0.8);
   }
 }
 
@@ -94,7 +93,7 @@ export default {
   width: 100%;
   text-align: right;
   padding-right: 4px;
-  opacity: 0.8;
+  color: rgba(0, 15, 8, 0.8);
 }
 
 .location-wrapper {
@@ -109,7 +108,7 @@ export default {
   h3 {
     font-size: 14px;
     padding-left: 5px;
-    opacity: 0.8;
+    color: rgba(0, 15, 8, 0.8);
     margin: 0;
   }
 }

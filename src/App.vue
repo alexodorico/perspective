@@ -36,6 +36,10 @@ export default {
 $dark: #000F08;
 $light: #D3DBD8;
 
+* {
+  box-sizing: border-box;
+}
+
 #app {
   background-color: $light;
   color: $dark;

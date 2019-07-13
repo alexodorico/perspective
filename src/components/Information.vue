@@ -33,7 +33,7 @@ export default {
 #information-wrapper {
   background-color: #D3DBD8;
   font-family: "Montserrat-Medium";
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
@@ -49,6 +49,8 @@ img {
 
 #information-text {
   padding: 1.25em;
+  max-width: 480px;
+  margin: 0 auto;
 }
 
 .clearfix::after {
