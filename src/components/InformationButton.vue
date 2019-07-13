@@ -28,9 +28,9 @@ button {
   cursor: pointer;
   float: right;
   font-family: "Eczar";
-  font-size: 24px;
-  height: 37px;
+  font-size: 14px;
+  height: 28px;
   padding: 5px;
-  width: 37px;
+  width: 28px;
 }
 </style>

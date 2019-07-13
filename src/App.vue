@@ -39,5 +39,6 @@ $light: #D3DBD8;
 #app {
   background-color: $light;
   color: $dark;
+  min-height: 100vh;
 }
 </style>

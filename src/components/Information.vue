@@ -43,7 +43,7 @@ export default {
 img {
   float: right;
   width: 37px;
-  padding: 15px 15px 0 0;
+  padding: 20px 20px 0 0;
   cursor: pointer;
 }
 
