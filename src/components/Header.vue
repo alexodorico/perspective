@@ -26,7 +26,7 @@ export default {
 <style scoped lang="scss">
 @font-face {
   font-family: "Eczar";
-  src: url("../assets/fonts/Eczar-SemiBold.ttf");
+  src: url("../assets/fonts/Eczar-Medium.ttf");
 }
 
 header {

@@ -20,9 +20,6 @@
         <img src="../assets/icons/iso.png" />
         <div class="value">{{ photo.iso }}</div>
       </div>
-      <div class="date">
-        {{ photo.taken_date }}
-      </div>
     </div>
   </div>
 </template>
@@ -86,14 +83,6 @@ export default {
     font-size: 14px;
     color: rgba(0, 15, 8, 0.8);
   }
-}
-
-.date {
-  font-size: 14px;
-  width: 100%;
-  text-align: right;
-  padding-right: 4px;
-  color: rgba(0, 15, 8, 0.8);
 }
 
 .location-wrapper {

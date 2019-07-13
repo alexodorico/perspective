@@ -23,14 +23,14 @@ export default {
 
 button {
   background-color: transparent;
-  border: 3px solid #000F08;
+  border: 2px solid #000F08;
   border-radius: 50%;
   cursor: pointer;
   float: right;
   font-family: "Eczar";
   font-size: 14px;
   height: 28px;
-  padding: 5px;
+  padding: 6px 5px 6px 6px;
   width: 28px;
 }
 </style>

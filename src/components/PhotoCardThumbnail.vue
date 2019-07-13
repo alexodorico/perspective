@@ -9,7 +9,7 @@ export default {
   },
   mounted: function() {
     let element = document.getElementById(`photo${this.photo.id}`);
-    element.style.backgroundImage = `url("https://gentle-island-72914.herokuapp.com${this.photo.image.url}")`;
+    element.style.backgroundImage = `url("${this.photo.taken_date}")`;
   }
 };
 </script>
