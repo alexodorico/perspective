@@ -2,12 +2,14 @@
   <div id="app">
     <Header @info-click="toggleInfo"/>
     <Information v-if="viewingInfo" @close-click="toggleInfo"/>
+    <PhotoCardWrapper />
   </div>
 </template>
 
 <script>
 import Header from "./components/Header.vue";
 import Information from "./components/Information";
+import PhotoCardWrapper from "./components/PhotoCardWrapper";
 import "normalize.css";
 
 export default {
@@ -19,7 +21,8 @@ export default {
   },
   components: {
     Header,
-    Information
+    Information,
+    PhotoCardWrapper
   },
   methods: {
     toggleInfo: function() {
