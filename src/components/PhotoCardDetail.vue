@@ -8,6 +8,21 @@
       </div>
     </div>
     <div class="detail-bottom">
+      <div class="setting">
+        <img src="../assets/icons/shutterspeed.png">
+        <div class="value">500</div>
+      </div>
+      <div class="setting">
+        <img src="../assets/icons/fstop.png">
+        <div class="value">f/1.4</div>
+      </div>
+      <div class="setting">
+        <img src="../assets/icons/iso.png">
+        <div class="value">2400</div>
+      </div>
+      <div class="date">
+        12/31/2019
+      </div>
     </div>
   </div>
 </template>
@@ -49,6 +64,36 @@ export default {
 .detail-top {
   padding-bottom: 10px;
   border-bottom: 1px solid rgba(151, 151, 151, 0.15);
+}
+
+.detail-bottom {
+  padding: 13px 0 3px;
+  display: flex;
+  align-items: center;
+}
+
+.setting {
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+  opacity: 0.8;
+
+  img {
+    height: 14.75px;
+  }
+
+  .value {
+    padding: 0 0 0 5px;
+    font-size: 14px;
+  }
+}
+
+.date {
+  font-size: 14px;
+  width: 100%;
+  text-align: right;
+  padding-right: 4px;
+  opacity: 0.8;
 }
 
 .location-wrapper {
