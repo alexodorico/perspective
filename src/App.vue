@@ -1,20 +1,28 @@
 <template>
   <div id="app">
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <Header />
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import Header from "./components/Header.vue";
+import "normalize.css";
 
 export default {
   name: "app",
   components: {
-    HelloWorld
+    Header
   }
 };
 </script>
 
 <style lang="scss">
+$dark: #000F08;
+$light: #D3DBD8;
 
+
+#app {
+  background-color: $light;
+  color: $dark;
+}
 </style>
