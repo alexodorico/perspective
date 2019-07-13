@@ -3,7 +3,11 @@
 </template>
 
 <script>
-export default {};
+export default {
+  props: {
+    photo: Object
+  },
+};
 </script>
 
 <style lang="scss" scoped>

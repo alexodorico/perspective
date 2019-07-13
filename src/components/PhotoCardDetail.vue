@@ -30,8 +30,8 @@
 <script>
 export default {
   props: {
-    msg: String
-  }
+    photo: Object
+  },
 };
 </script>
 

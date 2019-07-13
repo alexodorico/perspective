@@ -1,7 +1,7 @@
 <template>
   <div class="card-wrapper">
-    <PhotoThumbnail />
-    <PhotoDetail />
+    <PhotoThumbnail :photo="photo"/>
+    <PhotoDetail :photo="photo"/>
   </div>
 </template>
 
@@ -11,7 +11,7 @@ import PhotoDetail from "./PhotoCardDetail";
 
 export default {
   props: {
-    msg: String
+    photo: Object
   },
   components: {
     PhotoThumbnail,
