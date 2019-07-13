@@ -1,5 +1,5 @@
 <template>
-  <div id="wrapper">
+  <div v-if="photos" id="wrapper">
     <PhotoCard 
       v-for="(photo, index) of photos"
       :key="index"
