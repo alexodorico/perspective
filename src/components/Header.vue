@@ -2,16 +2,17 @@
   <header>
     <img src="../assets/icons/camera.png" />
     <h1>perspective</h1>
-    <div id="button-wrapper">
-      <button>
-        ?
-      </button>
-    </div>
+    <InformationButton />
   </header>
 </template>
 
 <script>
+import InformationButton from "./InformationButton";
+
 export default {
+  components: {
+    InformationButton
+  },
   props: {
     msg: String
   }
@@ -41,22 +42,5 @@ h1 {
 img {
   height: 28px;
   width: 28px;
-}
-
-#button-wrapper {
-  width: 100%;
-
-  button {
-    cursor: pointer;
-    float: right;
-    font-size: 24px;
-    font-family: "Eczar";
-    width: 37px;
-    height: 37px;
-    border-radius: 50%;
-    padding: 5px;
-    background-color: transparent;
-    border: 3px solid #000F08;
-  }
 }
 </style>
