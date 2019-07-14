@@ -1,5 +1,5 @@
 <template>
-  <div v-if="photos" id="wrapper">
+  <div v-if="photos" id="wrapper" :class="this.viewingInfo ? 'blur' : ''">
     <PhotoCard 
       v-for="(photo, index) of photos"
       :key="index"
@@ -13,6 +13,9 @@ import PhotoCard from "./PhotoCard";
 import axios from "axios";
 
 export default {
+  props: {
+    viewingInfo: Boolean
+  },
   components: {
     PhotoCard
   },
@@ -39,5 +42,10 @@ export default {
   width: 100%;
   max-width: 1280px;
   margin: 0 auto;
+  transition: all .3s ease-in 0.2s;
+}
+
+.blur {
+  filter: blur(4px) grayscale(50%) opacity(50%);
 }
 </style>

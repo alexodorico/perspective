@@ -1,26 +1,24 @@
 <template>
-  <header>
+  <header :class="this.viewingInfo ? 'blur' : ''" @click="handleHeaderClick">
     <div id="header-wrapper">
       <h1>perspective</h1>
-      <InformationButton @info-click="emitInfoClick"/>
     </div>
   </header>
 </template>
 
 <script>
-import InformationButton from "./InformationButton";
 
 export default {
-  components: {
-    InformationButton
+  props: {
+    viewingInfo: Boolean
   },
   methods: {
-    emitInfoClick: function() {
-      this.$emit("info-click");
+    handleHeaderClick: function() {
+      this.$emit("header-click");
     }
   }
 };
-</script>
+</script> 
 
 <style scoped lang="scss">
 @font-face {
@@ -33,11 +31,11 @@ header {
   box-shadow: 0 1px 6px 2px rgba(0, 0, 0, 0.12);
   position: sticky;
   top: 0;
+  transition: all .3s ease-in 0.2s;
 }
 
 #header-wrapper {
   align-items: center;
-  justify-content: flex-end;
   display: flex;
   padding: 0 1.5em 3px;
   height: 60px;
@@ -57,6 +55,10 @@ header {
 h1 {
   font-family: "Neucha-Regular";
   font-size: 30px;
-  margin: 3px 0 0 7px;
+  margin: 3px 0 0 12px;
+}
+
+.blur {
+  filter: blur(4px) grayscale(50%) opacity(50%);
 }
 </style>

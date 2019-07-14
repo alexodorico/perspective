@@ -1,8 +1,8 @@
 <template>
   <div id="app">
-    <Header @info-click="toggleInfo" />
-    <Information v-if="viewingInfo" @close-click="toggleInfo" />
-    <PhotoCardWrapper />
+    <Header :viewingInfo="viewingInfo" @header-click="toggleInfo" />
+    <Information :viewingInfo="viewingInfo" @close-click="toggleInfo" />
+    <PhotoCardWrapper :viewingInfo="viewingInfo" />
   </div>
 </template>
 
@@ -27,7 +27,8 @@ export default {
   methods: {
     toggleInfo: function() {
       this.viewingInfo = !this.viewingInfo;
-    }
+    },
+
   }
 };
 </script>

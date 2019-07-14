@@ -1,26 +1,28 @@
 <template>
-  <div id="information-wrapper">
-    <div class="clearfix">
+  <section :class="this.viewingInfo ? 'slide-in' : 'slide-out'">
+    <div class="clearfix button-wrapper" :class="this.viewingInfo ? 'fade-in' : 'fade-out'">
       <img @click="emitCloseInfo" src="../assets/icons/close.png" />
     </div>
-    <div id="information-text">
+    <div id="information-text" class="text-wrapper" :class="this.viewingInfo ? 'fade-in' : 'fade-out'">
       <h2>Hi, I'm Alex Odorico!</h2>
       <p>
         I made this website so I would have a
-        place to share some of the pictures I've took.
+        place to share some of the pictures I've taken.
       </p>
       <p>
         I currently shoot with a Fujifilm XT-3 for those
         of you who may be into that kind of thing.
       </p>
-      <p>Feel free to <a href="mailto:aodorico94@gmail.com">shoot me a message</a> if you want to chat!</p>
       <p>Thanks for visiting!</p>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
 export default {
+  props: {
+    viewingInfo: Boolean
+  },
   methods: {
     emitCloseInfo: function() {
       this.$emit("close-click");
@@ -35,14 +37,16 @@ export default {
   src: url("../assets/fonts/Montserrat-Medium.ttf");
 }
 
-#information-wrapper {
+section {
   background-color: #d3dbd8;
   font-family: "Montserrat-Medium";
   position: fixed;
-  top: 0;
   left: 0;
+  top: -100vh;
   width: 100vw;
   height: 100vh;
+  transition: height 0.3s ease-in 0.2s, top 0.3s ease-in 0.2s;
+  z-index: 1;
 }
 
 img {
@@ -52,25 +56,48 @@ img {
   cursor: pointer;
 }
 
-p {
-  line-height: 1.55;
-}
-
 #information-text {
   padding: 1.25em;
   max-width: 480px;
   margin: 0 auto;
 }
 
-a {
-  text-decoration: underline;
-  color: #201E50;
-  cursor: pointer;
+h2 {
+  font-family: "Neucha-Regular";
+}
+
+p {
+  line-height: 1.55;
 }
 
 .clearfix::after {
   content: "";
   clear: both;
   display: table;
+}
+
+.text-wrapper,
+.button-wrapper {
+  opacity: 0;
+  transition: color 0.75s ease 0.55s, opacity 0.75s ease;
+}
+
+.slide-in {
+  height: 100vh;
+  top: 0;
+}
+
+.slide-out {
+  top: -100vh;
+}
+
+.fade-in {
+  opacity: 1;
+
+}
+
+.fade-out {
+  opacity: 0;
+  color: #d3dbd8;
 }
 </style>
