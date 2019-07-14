@@ -32,6 +32,8 @@ header {
   position: sticky;
   top: 0;
   transition: all .3s ease-in 0.2s;
+  margin: 0 auto;
+  z-index: 1;
 }
 
 #header-wrapper {
@@ -41,7 +43,6 @@ header {
   height: 60px;
   width: 100%;
   max-width: 448px;
-  margin: 0 auto;
 
   @media (min-width: 864px) {
     max-width: 864px;
@@ -59,6 +60,6 @@ h1 {
 }
 
 .blur {
-  filter: blur(4px) grayscale(50%) opacity(50%);
+  filter: blur(6px) grayscale(100%);
 }
 </style>

@@ -43,9 +43,10 @@ export default {
   max-width: 1280px;
   margin: 0 auto;
   transition: all .3s ease-in 0.2s;
+  z-index: 0;
 }
 
 .blur {
-  filter: blur(4px) grayscale(50%) opacity(50%);
+  filter: blur(6px) grayscale(100%);
 }
 </style>

@@ -45,8 +45,8 @@ section {
   top: -100vh;
   width: 100vw;
   height: 100vh;
-  transition: height 0.3s ease-in 0.2s, top 0.3s ease-in 0.2s;
-  z-index: 1;
+  transition: top 0.33s ease-in 0.2s;
+  z-index: 2;
 }
 
 img {
@@ -83,7 +83,6 @@ p {
 }
 
 .slide-in {
-  height: 100vh;
   top: 0;
 }
 
