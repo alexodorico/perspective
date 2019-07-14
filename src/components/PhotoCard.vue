@@ -26,5 +26,10 @@ export default {
   max-width: 400px;
   margin: 0.5em;
   box-shadow: 0 1px 6px 2px rgba(0, 0, 0, 0.12);
+  transition: box-shadow 0.5s ease;
+
+  &:hover {
+    box-shadow: 0 1px 9px 8px rgba(0,0,0,0.3);
+  }
 }
 </style> 

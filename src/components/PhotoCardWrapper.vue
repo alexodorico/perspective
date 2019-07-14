@@ -1,5 +1,5 @@
 <template>
-  <div v-if="photos" id="wrapper" :class="this.viewingInfo ? 'blur' : ''">
+  <div v-if="photos" id="wrapper">
     <PhotoCard 
       v-for="(photo, index) of photos"
       :key="index"
@@ -42,11 +42,6 @@ export default {
   width: 100%;
   max-width: 1280px;
   margin: 0 auto;
-  transition: all .3s ease-in 0.2s;
   z-index: 0;
-}
-
-.blur {
-  filter: blur(6px) grayscale(100%);
 }
 </style>
