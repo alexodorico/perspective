@@ -1,7 +1,7 @@
 <template>
   <section :class="this.viewingInfo ? 'slide-in' : 'slide-out'">
-    <div class="clearfix button-wrapper" :class="this.viewingInfo ? 'fade-in' : 'fade-out'">
-      <img @click="emitCloseInfo" src="../assets/icons/close.png" />
+    <div class="clearfix button-wrapper">
+      <img @click="emitCloseInfo" src="../assets/icons/close.png" :class="this.viewingInfo ? 'fade-in' : 'fade-out'" />
     </div>
     <div id="information-text" class="text-wrapper" :class="this.viewingInfo ? 'fade-in' : 'fade-out'">
       <h2>Hi, I'm Alex Odorico!</h2>
@@ -49,11 +49,20 @@ section {
   z-index: 2;
 }
 
+.button-wrapper {
+  max-width: 480px;
+  margin: 0 auto;
+  position: relative;
+  top: 57px;
+  left: -42px;
+}
+
 img {
   float: right;
-  width: 37px;
-  padding: 20px 20px 0 0;
   cursor: pointer;
+  width: 20px;
+  opacity: 0;
+  transition: opacity 0.25s ease-in 1.05s;
 }
 
 #information-text {
@@ -76,10 +85,9 @@ p {
   display: table;
 }
 
-.text-wrapper,
-.button-wrapper {
+.text-wrapper {
   opacity: 0;
-  transition: color 0.75s ease 0.55s, opacity 0.75s ease;
+  transition: color 0.75s ease 0.6s, opacity 0.75s ease;
 }
 
 .slide-in {
@@ -92,7 +100,6 @@ p {
 
 .fade-in {
   opacity: 1;
-
 }
 
 .fade-out {

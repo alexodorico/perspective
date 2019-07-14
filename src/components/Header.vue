@@ -32,8 +32,8 @@ header {
   position: sticky;
   top: 0;
   transition: all .3s ease-in 0.2s;
-  margin: 0 auto;
   z-index: 1;
+  cursor: pointer;
 }
 
 #header-wrapper {
@@ -42,6 +42,7 @@ header {
   padding: 0 1.5em 3px;
   height: 60px;
   width: 100%;
+  margin: 0 auto;
   max-width: 448px;
 
   @media (min-width: 864px) {
