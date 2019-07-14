@@ -1,5 +1,5 @@
 <template>
-  <header :class="this.viewingInfo ? 'blur' : ''" @click="handleHeaderClick">
+  <header @click="handleHeaderClick">
     <div id="header-wrapper">
       <h1>perspective</h1>
     </div>
@@ -58,9 +58,5 @@ h1 {
   font-family: "Neucha-Regular";
   font-size: 30px;
   margin: 3px 0 0 12px;
-}
-
-.blur {
-  filter: blur(6px) grayscale(100%);
 }
 </style>

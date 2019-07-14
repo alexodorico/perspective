@@ -29,7 +29,7 @@ export default {
   transition: box-shadow 0.5s ease;
 
   &:hover {
-    box-shadow: 0 1px 9px 8px rgba(0,0,0,0.3);
+    box-shadow: 0 1px 8px 5px rgba(0,0,0,0.3);
   }
 }
 </style> 
