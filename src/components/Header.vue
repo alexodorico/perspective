@@ -1,7 +1,6 @@
 <template>
   <header>
     <div id="header-wrapper">
-      <img src="../assets/icons/camera.png" />
       <h1>perspective</h1>
       <InformationButton @info-click="emitInfoClick"/>
     </div>
@@ -25,17 +24,20 @@ export default {
 
 <style scoped lang="scss">
 @font-face {
-  font-family: "Eczar";
-  src: url("../assets/fonts/Eczar-Medium.ttf");
+  font-family: "Neucha-Regular";
+  src: url("../assets/fonts/Neucha-Regular.ttf");
 }
 
 header {
-  background-color: rgba(255, 255, 255, 0.66);
+  background-color: rgba(255, 255, 255, 1);
   box-shadow: 0 1px 6px 2px rgba(0, 0, 0, 0.12);
+  position: sticky;
+  top: 0;
 }
 
 #header-wrapper {
   align-items: center;
+  justify-content: flex-end;
   display: flex;
   padding: 0 1.5em 3px;
   height: 60px;
@@ -53,13 +55,8 @@ header {
 }
 
 h1 {
-  font-family: "Eczar";
+  font-family: "Neucha-Regular";
   font-size: 30px;
   margin: 3px 0 0 7px;
-}
-
-img {
-  height: 28px;
-  width: 28px;
 }
 </style>

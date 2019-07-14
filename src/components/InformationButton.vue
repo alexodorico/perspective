@@ -1,9 +1,7 @@
 <template>
-  <div id="button-wrapper">
     <button @click="emitInfoClick">
       ?
     </button>
-  </div>
 </template>
 
 <script>
@@ -17,20 +15,15 @@ export default {
 </script>
 
 <style scoped lang="scss">
-#button-wrapper {
-  width: 100%;
-}
-
 button {
   background-color: transparent;
-  border: 2px solid #000F08;
-  border-radius: 50%;
+  border: 0;
   cursor: pointer;
   float: right;
-  font-family: "Eczar";
-  font-size: 14px;
-  height: 28px;
-  padding: 6px 5px 6px 6px;
-  width: 28px;
+  font-family: "Neucha-Regular";
+  font-size: 30px;
+  height: 32px;
+  width: 17px;
+  padding: 0;
 }
 </style>
