@@ -22,5 +22,9 @@ export default {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
+
+  @media (min-width: 450px) {
+    height: 266px;
+  }
 }
 </style>
