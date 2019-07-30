@@ -8,7 +8,7 @@ export default {
     photo: Object
   },
   mounted: function() {
-    let element = document.getElementById(`photo${this.photo.id}`);
+    const element = document.getElementById(`photo${this.photo.id}`);
     element.style.backgroundImage = `url("${this.photo.taken_date}")`;
   }
 };
@@ -16,11 +16,12 @@ export default {
 
 <style lang="scss" scoped>
 .thumbnail-wrapper {
-  height: 220px;
-  width: 100%;
   background: #dddfe2;
-  background-size: cover;
-  background-repeat: no-repeat;
   background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 60vw;
+  max-height: 400px;
+  width: 100%;
 }
 </style>

@@ -43,10 +43,9 @@ header {
   height: 60px;
   width: 100%;
   margin: 0 auto;
-  max-width: 448px;
 
-  @media (min-width: 864px) {
-    max-width: 864px;
+  @media (min-width: 650px) {
+    max-width: 650px;
   }
 
     @media (min-width: 1280px) {
