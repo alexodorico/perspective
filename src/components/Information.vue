@@ -40,12 +40,12 @@ export default {
 section {
   background-color: #d3dbd8;
   font-family: "Montserrat-Medium";
-  position: fixed;
-  left: 0;
-  top: -100vh;
-  width: 100vw;
   height: 100vh;
+  left: 0;
+  position: fixed;
+  top: -100vh;
   transition: top 0.33s ease-in 0.2s;
+  width: 100vw;
   z-index: 2;
 }
 

@@ -29,18 +29,18 @@ export default {
 header {
   background-color: rgba(255, 255, 255, 1);
   box-shadow: 0 1px 6px 2px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
   position: sticky;
   top: 0;
   transition: all .3s ease-in 0.2s;
   z-index: 1;
-  cursor: pointer;
 }
 
 #header-wrapper {
   align-items: center;
   display: flex;
-  padding: 0 1.5em 3px;
   height: 60px;
+  padding: 0 1.5em 3px;
   width: 100%;
   margin: 0 auto;
 
@@ -48,8 +48,8 @@ header {
     max-width: 650px;
   }
 
-    @media (min-width: 1280px) {
-    max-width: 1280px;
+    @media (min-width: 1265px) {
+    max-width: 1265px;
   }
 }
 

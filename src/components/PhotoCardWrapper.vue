@@ -13,11 +13,11 @@ import PhotoCard from "./PhotoCard";
 import axios from "axios";
 
 export default {
-  props: {
-    viewingInfo: Boolean
-  },
   components: {
     PhotoCard
+  },
+  props: {
+    viewingInfo: Boolean
   },
   data: function() {
     return {
@@ -35,13 +35,13 @@ export default {
 
 <style scoped lang="scss">
 #wrapper {
-  padding: 1em;
   display: flex;
   flex-wrap: wrap; 
   justify-content: center;
-  width: 100%;
-  max-width: 1280px;
+  padding: 1em;
   margin: 0 auto;
+  max-width: 1280px;
+  width: 100%;
   z-index: 0;
 }
 </style>
