@@ -1,5 +1,5 @@
 <template>
-  <div v-if="photos" id="wrapper">
+  <div v-if="photos" class="wrapper">
     <PhotoCard 
       v-for="(photo, index) of photos"
       :key="index"
@@ -10,38 +10,53 @@
 
 <script>
 import PhotoCard from "./PhotoCard";
-import axios from "axios";
 
 export default {
   components: {
     PhotoCard
   },
   props: {
-    viewingInfo: Boolean
-  },
-  data: function() {
-    return {
-      photos: []
-    }
-  },
-  created: function() {
-    axios
-      .get("https://gentle-island-72914.herokuapp.com/photos")
-      .then(response => this.photos = (response.data))
-      .catch(error => this.displayError(error));
+    viewingInfo: Boolean,
+    viewingAstro: Boolean,
+    photos: Array
   }
 };
 </script>
 
 <style scoped lang="scss">
-#wrapper {
+.wrapper {
   display: flex;
   flex-wrap: wrap; 
   justify-content: center;
-  padding: 1em;
+  left: 0;
   margin: 0 auto;
   max-width: 1280px;
+  padding: 1em;
+  position: absolute;
   width: 100%;
   z-index: 0;
+  transition: left 0.33s;
+
+  &.goRight {
+    left: 0;
+  }
+
+  &.goLeft {
+    left: -100vw;
+  }
 }
+
+[astro="true"] {
+  top: 60px;
+  left: 100vw;
+
+  &.goRight {
+    left: 100vw;
+  }
+
+  &.goLeft {
+    left: 0;
+  }
+}
+
 </style>
