@@ -9,7 +9,7 @@ export default {
   },
   mounted: function() {
     const element = document.getElementById(`photo${this.photo.id}`);
-    element.style.backgroundImage = `url("${this.photo.taken_date}")`;
+    element.style.backgroundImage = `url("${this.photo.url}")`;
   }
 };
 </script>
