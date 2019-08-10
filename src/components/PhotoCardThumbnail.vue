@@ -13,15 +13,3 @@ export default {
   }
 };
 </script>
-
-<style lang="scss" scoped>
-.thumbnail-wrapper {
-  background: #dddfe2;
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 60vw;
-  max-height: 400px;
-  width: 100%;
-}
-</style>

@@ -1,9 +1,27 @@
 <template>
   <div id="app" :class="viewingAstro ? 'dark' : 'light'" >
-    <Header :viewingInfo="viewingInfo" :astro="viewingAstro" @header-click="toggleInfo" @toggle-view="toggleView"/>
-    <Information :viewingInfo="viewingInfo" @close-click="toggleInfo" />
-    <PhotoCardWrapper :viewingInfo="viewingInfo" :astro="false" :photos="photos" :class="viewingAstro ? 'goLeft' : 'goRight'" />
-    <PhotoCardWrapper :viewingInfo="viewingInfo" :astro="true" :photos="astroPhotos" :class="viewingAstro ? 'goLeft' : 'goRight'"/>
+    <Header
+      :viewingInfo="viewingInfo"
+      :astro="viewingAstro"
+      @header-click="toggleInfo"
+      @toggle-view="toggleView"
+    />
+    <Information
+      :viewingInfo="viewingInfo"
+      @close-click="toggleInfo"
+    />
+    <PhotoCardWrapper
+      :viewingInfo="viewingInfo"
+      :astro="false"
+      :photos="photos"
+      :class="viewingAstro ? 'goLeft' : 'goRight'"
+    />
+    <PhotoCardWrapper
+      :viewingInfo="viewingInfo"
+      :astro="true"
+      :photos="astroPhotos"
+      :class="viewingAstro ? 'goLeft' : 'goRight'"
+    />
   </div>
 </template>
 
@@ -13,6 +31,7 @@ import Information from "./components/Information";
 import PhotoCardWrapper from "./components/PhotoCardWrapper";
 import axios from "axios";
 import "normalize.css";
+import "./main.scss";
 
 export default {
   name: "app",
@@ -54,28 +73,3 @@ export default {
   }
 };
 </script>
-
-<style lang="scss">
-$dark: #000f08;
-$light: #d3dbd8;
-
-* {
-  box-sizing: border-box;
-}
-
-#app {
-  min-height: 100vh;
-  background-color: $light;
-  color: $dark;
-}
-
-// .light {
-//   background-color: $light;
-//   color: $dark;
-// }
-
-// .dark {
-//   background-color: $dark;
-//   color: $light;
-// }
-</style>

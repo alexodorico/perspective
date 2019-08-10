@@ -22,37 +22,3 @@ export default {
   }
 };
 </script>
-
-<style scoped lang="scss">
-.wrapper {
-  display: flex;
-  flex-wrap: wrap; 
-  justify-content: center;
-  margin: 0 auto;
-  max-width: 1280px;
-  padding: 1em;
-  width: 100%;
-  z-index: 0;
-
-  &.goRight {
-    display: flex;
-  }
-
-  &.goLeft {
-    display: none;
-  }
-}
-
-[astro="true"] {
-  display: none;
-
-  &.goRight {
-    display: none;
-  }
-
-  &.goLeft {
-    display: flex;
-  }
-}
-
-</style>
