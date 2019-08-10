@@ -28,34 +28,30 @@ export default {
   display: flex;
   flex-wrap: wrap; 
   justify-content: center;
-  left: 0;
   margin: 0 auto;
   max-width: 1280px;
   padding: 1em;
-  position: absolute;
   width: 100%;
   z-index: 0;
-  transition: left 0.33s;
 
   &.goRight {
-    left: 0;
+    display: flex;
   }
 
   &.goLeft {
-    left: -100vw;
+    display: none;
   }
 }
 
 [astro="true"] {
-  top: 60px;
-  left: 100vw;
+  display: none;
 
   &.goRight {
-    left: 100vw;
+    display: none;
   }
 
   &.goLeft {
-    left: 0;
+    display: flex;
   }
 }
 

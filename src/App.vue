@@ -1,6 +1,6 @@
 <template>
-  <div id="app" :class="viewingAstro ? 'dark' : 'light'">
-    <Header :viewingInfo="viewingInfo" @header-click="toggleInfo" @toggle-view="toggleView"/>
+  <div id="app" :class="viewingAstro ? 'dark' : 'light'" >
+    <Header :viewingInfo="viewingInfo" :astro="viewingAstro" @header-click="toggleInfo" @toggle-view="toggleView"/>
     <Information :viewingInfo="viewingInfo" @close-click="toggleInfo" />
     <PhotoCardWrapper :viewingInfo="viewingInfo" :astro="false" :photos="photos" :class="viewingAstro ? 'goLeft' : 'goRight'" />
     <PhotoCardWrapper :viewingInfo="viewingInfo" :astro="true" :photos="astroPhotos" :class="viewingAstro ? 'goLeft' : 'goRight'"/>
