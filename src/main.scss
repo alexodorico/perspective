@@ -5,6 +5,10 @@ $light: #d3dbd8;
   box-sizing: border-box;
 }
 
+body {
+  height: 100vh;
+}
+
 @font-face {
   font-family: "Neucha-Regular";
   src: url("./assets/fonts/Neucha-Regular.ttf");
@@ -105,6 +109,7 @@ header {
   position: sticky;
   top: 0;
   z-index: 1;
+  width: 100vw;
 }
 
 #header-wrapper {
