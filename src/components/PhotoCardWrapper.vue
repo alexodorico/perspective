@@ -16,7 +16,6 @@ export default {
     PhotoCard
   },
   props: {
-    viewingInfo: Boolean,
     viewingAstro: Boolean,
     photos: Array
   }

@@ -1,33 +1,24 @@
 <template>
   <div id="app" :class="viewingAstro ? 'dark' : 'light'" >
     <Header
-      :viewingInfo="viewingInfo"
       :astro="viewingAstro"
-      @header-click="toggleInfo"
       @toggle-view="toggleView"
     />
-    <Information
-      :viewingInfo="viewingInfo"
-      @close-click="toggleInfo"
-    />
     <PhotoCardWrapper
-      :viewingInfo="viewingInfo"
       :astro="false"
       :photos="photos"
-      :class="viewingAstro ? 'goLeft' : 'goRight'"
+      :class="viewingAstro ? 'goLeft light' : 'goRight light'"
     />
     <PhotoCardWrapper
-      :viewingInfo="viewingInfo"
       :astro="true"
       :photos="astroPhotos"
-      :class="viewingAstro ? 'goLeft' : 'goRight'"
+      :class="viewingAstro ? 'goLeft dark' : 'goRight dark'"
     />
   </div>
 </template>
 
 <script>
 import Header from "./components/Header.vue";
-import Information from "./components/Information";
 import PhotoCardWrapper from "./components/PhotoCardWrapper";
 import axios from "axios";
 import "normalize.css";
@@ -37,7 +28,6 @@ export default {
   name: "app",
   data: function() {
     return {
-      viewingInfo: false,
       viewingAstro: false,
       astroPhotos: [],
       photos: []
@@ -45,7 +35,6 @@ export default {
   },
   components: {
     Header,
-    Information,
     PhotoCardWrapper
   },
   created: function() {
@@ -55,9 +44,6 @@ export default {
       .catch(error => this.displayError(error));
   },
   methods: {
-    toggleInfo: function() {
-      this.viewingInfo = !this.viewingInfo;
-    },
     toggleView: function() {
       this.viewingAstro = !this.viewingAstro;
     },

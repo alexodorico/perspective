@@ -5,34 +5,105 @@ $light: #d3dbd8;
   box-sizing: border-box;
 }
 
-#app {
-  min-height: 100vh;
-  background-color: $light;
-  color: $dark;
-}
-
-// .light {
-//   background-color: $light;
-//   color: $dark;
-// }
-
-// .dark {
-//   background-color: $dark;
-//   color: $light;
-// }
-
 @font-face {
   font-family: "Neucha-Regular";
   src: url("./assets/fonts/Neucha-Regular.ttf");
 }
 
+@font-face {
+  font-family: "Montserrat-Medium";
+  src: url("./assets/fonts/Montserrat-Medium.ttf");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("./assets/fonts/Montserrat-Medium.ttf");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("./assets/fonts/Montserrat-Regular.ttf");
+  font-weight: 400;
+}
+
+#app {
+  min-width: 100vh;
+}
+
+#app,
+header,
+section,
+.wrapper,
+.thumbnail-wrapper,
+.svg-wrapper,
+svg.active,
+.detail-wrapper {
+  transition: all 0.4s ease-in-out;
+}
+
+.light {
+  color: $dark;
+
+  header,
+  section {
+    background-color: #efefef;
+  }
+
+  .svg-wrapper {
+    background-color: $light;
+
+    svg.active {
+      background-color: #efefef;
+    }
+  }
+
+  .detail-wrapper {
+    background-color: rgba(255, 255, 255, 0.66);
+  }
+}
+
+.dark {
+  color: $light;
+
+  header,
+  section {
+    background-color: #202020;
+  }
+
+  svg {
+    fill: $light;
+  }
+
+  .detail-wrapper {
+    img {
+      filter: invert(1);
+    }
+  }
+
+  .card-wrapper {
+    box-shadow: 0 1px 4px rgba(255, 255, 255, 0.1);
+  }
+
+  .svg-wrapper {
+    background-color: $dark;
+
+    svg.active {
+      background-color: #202020;
+    }
+  }
+
+  .detail-wrapper {
+    background-color: rgba(0, 0, 0, 0.66);
+  }
+}
+
 header {
-  background-color: rgba(255, 255, 255, 1);
+  background-color: #efefef;
   box-shadow: 0 1px 6px 2px rgba(0, 0, 0, 0.12);
   cursor: pointer;
   position: sticky;
   top: 0;
-  transition: all 0.3s ease-in 0.2s;
   z-index: 1;
 }
 
@@ -49,7 +120,6 @@ header {
     border-radius: 5px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12);
     display: flex;
-    background-color: #d3dbd8;
 
     svg {
       width: 35px;
@@ -58,7 +128,6 @@ header {
 
       &.active {
         border-radius: 5px;
-        background-color: #fff;
       }
     }
   }
@@ -78,19 +147,12 @@ h1 {
   margin: 3px 0 0 12px;
 }
 
-@font-face {
-  font-family: "Montserrat-Medium";
-  src: url("./assets/fonts/Montserrat-Medium.ttf");
-}
-
 section {
-  background-color: #d3dbd8;
   font-family: "Montserrat-Medium";
   height: 100vh;
   left: 0;
   position: fixed;
   top: -100vh;
-  transition: top 0.33s ease-in 0.2s;
   width: 100vw;
   z-index: 2;
 }
@@ -108,7 +170,6 @@ section img {
   cursor: pointer;
   width: 20px;
   opacity: 0;
-  transition: opacity 0.25s ease-in 1.05s;
 }
 
 #information-text {
@@ -133,7 +194,6 @@ p {
 
 .text-wrapper {
   opacity: 0;
-  transition: color 0.75s ease 0.6s, opacity 0.75s ease;
 }
 
 .slide-in {
@@ -150,14 +210,14 @@ p {
 
 .fade-out {
   opacity: 0;
-  color: #d3dbd8;
+  color: $light;
 }
 
 .card-wrapper {
   box-shadow: 0 1px 6px 2px rgba(0, 0, 0, 0.12);
   margin: 0.5em;
   max-width: 600px;
-  transition: box-shadow 0.5s ease;
+  transition: box-shadow 0.4s ease-in-out;
   width: 100%;
 
   &:hover {
@@ -165,23 +225,10 @@ p {
   }
 }
 
-@font-face {
-  font-family: "Montserrat";
-  src: url("./assets/fonts/Montserrat-Medium.ttf");
-  font-weight: 600;
-}
-
-@font-face {
-  font-family: "Montserrat";
-  src: url("./assets/fonts/Montserrat-Regular.ttf");
-  font-weight: 400;
-}
-
 .detail-wrapper {
   padding: 0.75em;
   font-family: "Montserrat";
   font-weight: 400;
-  background-color: rgba(255, 255, 255, 0.66);
 
   h2 {
     margin: 0;
@@ -214,7 +261,7 @@ p {
   .value {
     padding: 0 0 0 5px;
     font-size: 14px;
-    color: rgba(0, 15, 8, 0.8);
+    opacity: 0.8;
   }
 }
 
@@ -230,13 +277,12 @@ p {
   h3 {
     font-size: 14px;
     padding-left: 5px;
-    color: rgba(0, 15, 8, 0.8);
+    opacity: 0.8;
     margin: 0;
   }
 }
 
 .thumbnail-wrapper {
-  background: #dddfe2;
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -248,30 +294,36 @@ p {
 .wrapper {
   display: flex;
   flex-wrap: wrap;
+  position: absolute;
   justify-content: center;
   margin: 0 auto;
   max-width: 1280px;
+  background-color: $light;
   padding: 1em;
-  width: 100%;
+  width: 100vw;
   z-index: 0;
+  top: 60px;
+  left: 0;
+  transition: left 0.4s ease-in-out;
 
   &.goRight {
-    display: flex;
+    left: 0;
   }
 
   &.goLeft {
-    display: none;
+    left: -100vw;
   }
 }
 
 [astro="true"] {
-  display: none;
+  background-color: $dark;
+  left: 100vw;
 
   &.goRight {
-    display: none;
+    left: 100vw;
   }
 
   &.goLeft {
-    display: flex;
+    left: 0;
   }
 }
